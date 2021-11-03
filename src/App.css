@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+header {
+	padding-right: 30px;
+	height: 200px;
+	display: flex;
+	align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-bar ul {
+	display: flex;
+	width: 28%;
+	justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-dp {
+	margin-left: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.card-details {
+	border-top: 2px solid #f6f6f7;
+	border-bottom: 2px solid #f6f6f7;
+	padding: 25px 0 10px 0;
+	display: flex;
+	justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-details-header {
+	height: 75px;
+}
+
+.card-details-header-2 {
+	height: 52px;
+	margin-bottom: 3%;
+}
+
+.card-info-div h3 {
+	color: #252525;
+	font-weight: 600;
+}
+
+.card-info-div p {
+	color: #c7cad2;
+	font-size: 14px;
+	margin-top: 1%;
+}
+
+.card-types-div {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.card-types {
+	display: inline-block;
+}
+
+.card-form {
+	width: 45%;
+}
+
+/* CUSTOM RADIO BUTTONS  */
+
+/* The container */
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	height: 13px;
+	width: 13px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+	top: 4px;
+	left: 4px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: white;
+}
+
+.checkbox-container span {
+	font-size: 14px;
+	color: #646464;
+	font-weight: 500;
+}
+
+.group-input-div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-div {
+	display: flex;
+	flex-direction: column;
+	width: 48%;
+}
+
+.input-div label {
+	color: #7b7b7b;
+}
+
+.input-div input {
+	background-color: #eff0f2;
+	padding: 16px;
+	border-radius: 5px;
+	display: inline-block;
+	margin-top: 5%;
+	border: 2px solid #d2d3d9;
+}
+
+.input-div input:focus {
+	outline: none;
+}
+
+.submit-btn {
+	background-color: #3f67e9;
+	color: #ffffff;
+	padding: 17px;
+	border-radius: 2px;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	margin-top: 1%;
+}
+
+.sub-calc-div {
+	border-bottom: 2px solid #f6f6f7;
+	display: flex;
+	flex-direction: column;
+	padding: 4% 0 8% 0;
+}
+
+.sub-calc-div-info {
+	color: #252525;
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3%;
+}
+
+.sub-calc-div-info span {
+	color: #c7cad2;
+	font-weight: 600;
+}
+
+.complete-payment {
+	padding: 4% 0 10% 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.complete-payment button {
+	background-color: #3f67e9;
+	color: #ffffff;
+	padding: 15px 40px;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+}
+
+.complete-payment p {
+	color: #252525;
+	font-weight: 800;
+	font-size: 19px;
+	letter-spacing: -1px;
+}
+
+@media screen and (max-width: 1000px) {
+	.nav-bar ul {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.nav-bar {
+		justify-content: space-between;
+		width: 90%;
+		margin: auto;
+	}
+
+	.nav-bar ul {
+		width: 65%;
+	}
+
+	.card-details {
+		flex-direction: column;
+	}
+
+	.card-form {
+		width: 100%;
+		margin-top: 10%;
+		padding-bottom: 3%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header {
+		padding-right: 0;
+	}
+
+	.nav-bar {
+		width: 95%;
+		margin: auto;
+	}
+
+	.nav-bar ul {
+		width: 85%;
+	}
+
+	.card img {
+		width: 50%;
+	}
 }
